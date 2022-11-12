@@ -10,6 +10,22 @@ for i in range(min(a,b),0,-1): # min(a,b)에서 1까지 역순으로 숫자 생�
     
 # 공통 약수들 중 가장 큰 것을 구하는 것이므로 for문을 주어진수 ~1까지 -1히면서 돌렸다.
 
+# 최대공약수 함수
+
+def GCD(X,Y):
+    if X<Y:
+        min=X
+        
+    else:
+        min=Y
+        
+    for i in range(min+1,1,-1):
+        if X%i==0 and Y%i==0:
+            res=i
+            break
+    return res
+        
+
 # 유클리드 호제법
 
 def GCD(x,y):

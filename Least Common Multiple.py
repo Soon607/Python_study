@@ -10,6 +10,22 @@ for i in range(max(a,b),(a*b)+1):
 # 더 큰 숫자부터 실행하는 이유: a,b의 공통부분을 찾는 것이기 때문에 작은 수부터 시작하게 되면 큰 수에 도달할때까지 for문이 헛돌게 된다.
 # 공통 배수들 중 가장 작은 것을 구하는 것이므로 for문을 주어진 수부터 +1을 하였다.
 
+# 최소공배수 함수
+
+def KCM(X,Y):
+    if X<Y:
+        max=Y
+        
+    else:
+        max=X
+        
+    for i in range(max,(X*Y)+1):
+        if i%X==0 and i%Y==0:
+            res=i
+            break
+    return res
+    
+
 # 유클리드 호제법
 
 def GCD(x,y):
